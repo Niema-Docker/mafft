@@ -5,8 +5,8 @@ MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 # install MAFFT
 RUN apk update && \
     apk add bash gcc make musl-dev && \
-    wget "https://mafft.cbrc.jp/alignment/software/mafft-7.475-with-extensions-src.tgz" | tar -zx && \
-    cd mafft-7.475-with-extensions/core && \
+    wget "https://mafft.cbrc.jp/alignment/software/mafft-7.475-without-extensions-src.tgz" | tar -zx && \
+    cd mafft-7.475-without-extensions/core && \
     make clean && \
     make && \
     make install && \
