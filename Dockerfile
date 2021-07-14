@@ -6,9 +6,9 @@ MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 RUN apk update && \
     apk add bash gcc make musl-dev && \
     wget -qO- "https://mafft.cbrc.jp/alignment/software/mafft-7.475-without-extensions-src.tgz" | tar -zx && \
-    cd mafft-7.475-without-extensions/core && \
+    cd mafft-*/core && \
     make clean && \
     make && \
     make install && \
     cd ../.. && \
-    rm -rf mafft-7.475-with-extensions
+    rm -rf mafft-*
