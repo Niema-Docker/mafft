@@ -1,11 +1,11 @@
-# Minimal Docker image for MAFFT v7.505 using Alpine base
+# Minimal Docker image for MAFFT using Alpine base
 FROM alpine:3.13.5
 MAINTAINER Niema Moshiri <niemamoshiri@gmail.com>
 
 # install MAFFT
 RUN apk update && \
     apk add bash gcc make musl-dev && \
-    wget -qO- "https://mafft.cbrc.jp/alignment/software/mafft-7.526-without-extensions-src.tgz" | tar -zx && \
+    wget -qO- "https://gitlab.com/sysimm/mafft/-/archive/v7.526/mafft-v7.526.tar.gz" | tar -zx && \
     cd mafft-*/core && \
     make clean && \
     make && \
